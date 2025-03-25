@@ -165,7 +165,7 @@ In this section, we move from design to implementation by creating the physical 
 ---
 
 ### DDL Implementation
-The database creation is based on the provided DDL scripts (`create_tables.sql`), which create the following tables:
+The database creation is based on the provided DDL scripts [create_tables.sql](sql/create_tables.sql), which create the following tables:
 - **department**
 - **job** (includes the sensitive salary field)
 - **location**
