@@ -178,7 +178,7 @@ These scripts lay the foundation for the physical database by establishing the n
 
 ### CRUD Operations
 
-#### Question 1: Return a List of Employees with Job Titles and Department Names
+#### Query 1: Return a List of Employees with Job Titles and Department Names
 This query retrieves the current employment assignments by selecting employees whose `end_dt` is NULL.
 
 ```sql
@@ -195,7 +195,7 @@ WHERE eh.end_dt IS NULL;
 
 ---
 
-#### Question 2: Insert "Web Programmer" as a New Job Title
+#### Query 2: Insert "Web Programmer" as a New Job Title
 
 This query inserts a new record for the job title "Web Programmer" along with its associated salary.
 
@@ -209,7 +209,7 @@ INSERT INTO job (job_title, salary) VALUES ('Web Programmer', 55000);
 
 ---
 
-#### Question 3: Update the Job Title from "Web Programmer" to "Web Developer"
+#### Query 3: Update the Job Title from "Web Programmer" to "Web Developer"
 
 This query updates the job title from "Web Programmer" to "Web Developer".
 
@@ -225,7 +225,7 @@ WHERE job_title = 'Web Programmer';
 
 ---
 
-#### Question 4: Delete the Job Title "Web Developer" from the Database
+#### Query 4: Delete the Job Title "Web Developer" from the Database
 
 This query removes the job title "Web Developer" from the database.
 
@@ -240,7 +240,7 @@ WHERE job_title = 'Web Developer';
 
 ---
 
-#### Question 5: Count Current Employees in Each Department
+#### Query 5: Count Current Employees in Each Department
 
 This query counts the number of employees in each department based on current assignments (where `end_dt` is NULL).
 
@@ -258,7 +258,7 @@ GROUP BY d.department_name;
 
 ---
 
-#### Question 6: Retrieve Current and Past Employment History for Employee Toni Lembeck
+#### Query 6: Retrieve Current and Past Employment History for Employee Toni Lembeck
 
 This query returns both current and historical employment details for the employee Toni Lembeck.
 
@@ -277,11 +277,6 @@ WHERE e.emp_nm = 'Toni Lembeck';
 ![Q6 Result](screenshots/q6.png)
 
 ---
-
-#### Question 7: Describe how you would apply table security to restrict access to employee salaries using an SQL server
-
-To restrict access to employee salaries in SQL Server, I would implement Role-Based Access Control (RBAC) by creating separate roles for general users and HR/management. General users would be granted read-only access to a view or subset of the table that excludes the salary column, while HR and management roles would have full access to all columns, including salaries. Additionally, I could employ column-level security or dynamic data masking to further limit visibility of sensitive salary data, ensuring that only authorized personnel can access or modify this information.
-
 
 
 ## Part 4: Above and Beyond
