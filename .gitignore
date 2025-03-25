@@ -1,0 +1,5 @@
+.venv/
+*.txt
+!requirements.txt
+*.ps1
+readme.pdf
